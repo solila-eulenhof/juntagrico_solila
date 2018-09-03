@@ -157,9 +157,9 @@ VOCABULARY = {
     'depot' : 'Depot',
     'depot_pl' : 'Depots'
 }
-ORGANISATION_NAME = "Verein Solidarische Landwirtschaft Eulenhof"
-ORGANISATION_NAME_CONFIG = {"type" : "",
-    "gender" : ""}
+ORGANISATION_NAME = "solila"
+ORGANISATION_NAME_CONFIG = {"type" : "Verein",
+    "gender" : "M"}
 ORGANISATION_LONG_NAME = "Verein Solidarische Landwirtschaft Eulenhof"
 ORGANISATION_ADDRESS = {"name":"Verein Solidarische Landwirtschaft Eulenhof", 
             "street" : "Schaufelgasse",
@@ -170,7 +170,7 @@ ORGANISATION_ADDRESS = {"name":"Verein Solidarische Landwirtschaft Eulenhof",
 ORGANISATION_PHONE =''
 ORGANISATION_BANK_CONNECTION = {"PC" : "0",
             "IBAN" : "CH 10 0839 2000 1516 0130 5",
-            "BIC" : "0",
+            "BIC" : "",
             "NAME" : "Freie Gemeinschaftsbank Genossenschaft",
             "ESR" : ""}
 INFO_EMAIL = "solila@eulenhof-moehlin.ch"
@@ -187,7 +187,7 @@ FAQ_DOC = ""
 EXTRA_SUB_INFO = ""
 ACTIVITY_AREA_INFO = ""
 SHARE_PRICE = "0"
-ENABLE_SHARES = True
+ENABLE_SHARES = False
 BASE_FEE = ""
 CURRENCY = "CHF"
 ASSIGNMENT_UNIT = "ENTITY"
