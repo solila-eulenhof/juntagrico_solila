@@ -14,7 +14,7 @@ SECRET_KEY = '8cd-j&jo=-#ecd1jjulp_s*7y$n4tad(0d_g)l=6@n^r8fg3rn'
 
 DEBUG = os.environ.get("JUNTAGRICO_DEBUG", 'True')=='True'
 
-ALLOWED_HOSTS = ['juntagrico.eulenhof-moehlin.ch','solila.juntagrico.science', 'localhost',]
+ALLOWED_HOSTS = ['juntagrico.eulenhof-moehlin.ch','solila.juntagrico.science', 'localhost','juntagrico.solila-eulenhof.ch']
 
 
 # Application definition
@@ -173,7 +173,7 @@ ORGANISATION_BANK_CONNECTION = {"PC" : "0",
             "BIC" : "",
             "NAME" : "Freie Gemeinschaftsbank Genossenschaft",
             "ESR" : ""}
-INFO_EMAIL = "solila@eulenhof-moehlin.ch"
+INFO_EMAIL = "info@solila-eulenhof.ch"
 SERVER_URL = "www.solila.org"
 ADMINPORTAL_NAME = "juntagrico.eulenhof-moehlin.ch"
 ADMINPORTAL_SERVER_URL = "juntagrico.eulenhof-moehlin.ch"
