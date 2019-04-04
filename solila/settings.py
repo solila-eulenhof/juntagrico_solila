@@ -71,7 +71,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'solila.wsgi.application'
 
 
-LANGUAGE_CODE = 'de_CH'
+LANGUAGE_CODE = 'de-ch'
 
 SITE_ID = 1
 
