@@ -173,7 +173,7 @@ ORGANISATION_BANK_CONNECTION = {"PC" : "0",
             "NAME" : "Freie Gemeinschaftsbank Genossenschaft",
             "ESR" : ""}
 INFO_EMAIL = "info@solila-eulenhof.ch"
-SERVER_URL = "www.solila.org"
+SERVER_URL = "www.solila.ch"
 ADMINPORTAL_NAME = "juntagrico.eulenhof-moehlin.ch"
 ADMINPORTAL_SERVER_URL = "juntagrico.eulenhof-moehlin.ch"
 BUSINESS_REGULATIONS = ""
