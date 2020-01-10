@@ -14,7 +14,7 @@ SECRET_KEY = '8cd-j&jo=-#ecd1jjulp_s*7y$n4tad(0d_g)l=6@n^r8fg3rn'
 
 DEBUG = os.environ.get("JUNTAGRICO_DEBUG", 'True')=='True'
 
-ALLOWED_HOSTS = ['juntagrico.eulenhof-moehlin.ch','solila.juntagrico.science', 'localhost','juntagrico.solila-eulenhof.ch']
+ALLOWED_HOSTS = ['juntagrico.eulenhof-moehlin.ch','solila.juntagrico.science', 'localhost','juntagrico.solila-eulenhof.ch', '127.0.0.1']
 
 
 # Application definition
@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'juntagrico',
     'impersonate',
+    'crispy_forms'
     'solila',
 ]
 
@@ -70,7 +71,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'solila.wsgi.application'
 
 
-LANGUAGE_CODE = 'de-ch'
+LANGUAGE_CODE = 'de'
 
 SITE_ID = 1
 
@@ -138,6 +139,11 @@ LOGIN_REDIRECT_URL = "/my/home"
 ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 
 MEDIA_ROOT = 'media'
+
+"""
+    Crispy Settings
+"""
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 VOCABULARY = {
     'member': 'Mitglied',
