@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'juntagrico',
     'impersonate',
-    'crispy_forms'
+    'crispy_forms',
     'solila',
 ]
 
