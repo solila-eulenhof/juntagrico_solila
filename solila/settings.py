@@ -212,22 +212,3 @@ IMAGES = {'status_100': '/static/img/status_100.png',
             'single_core': '/static/img/single_core.png',
             'core': '/static/img/core.png'}
 GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
-EMAILS = {
-    'welcome': 'mails/member/member_welcome.txt',
-    'co_welcome': 'mails/member/co_member_welcome.txt',
-    'co_added': 'mails/member/co_member_added.txt',
-    'password': 'mails/member/password_reset.txt',
-    'j_reminder': 'mails/member/job_reminder.txt',
-    'j_canceled': 'mails/member/job_canceled.txt',
-    'confirm': 'mails/member/email_confirm.txt',
-    'j_changed': 'mails/member/job_time_changed.txt',
-    'j_signup': 'mails/member/job_signup.txt',
-    'd_changed': 'mails/member/depot_changed.txt',
-    's_created': 'mails/member/share_created.txt',
-    'n_sub': 'mails/admin/subscription_created.txt',
-    's_canceled': 'mails/admin/subscription_canceled.txt',
-    'm_canceled': 'mails/admin/membership_canceled.txt',
-    'b_share': 'mails/billing/share.txt',
-    'b_sub': 'mails/billing/sub.txt',
-    'b_esub': 'mails/billing/extrasub.txt'
-}
