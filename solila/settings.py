@@ -37,12 +37,12 @@ ROOT_URLCONF = 'solila.urls'
 
 DATABASES = {
     'default': {
-        'ENGINE': os.environ.get('JUNTAGRICO_DATABASE_ENGINE','django.db.backends.sqlite3'), 
-        'NAME': os.environ.get('JUNTAGRICO_DATABASE_NAME','solila.db'), 
-        'USER': os.environ.get('JUNTAGRICO_DATABASE_USER'), #''junatagrico', # The following settings are not used with sqlite3:
-        'PASSWORD': os.environ.get('JUNTAGRICO_DATABASE_PASSWORD'), #''junatagrico',
-        'HOST': os.environ.get('JUNTAGRICO_DATABASE_HOST'), #'localhost', # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': os.environ.get('JUNTAGRICO_DATABASE_PORT', False), #''', # Set to empty string for default.
+        'ENGINE': os.environ.get('JUNTAGRICO_DATABASE_ENGINE','django.db.backends.postgresql'),
+        'NAME': os.environ.get('JUNTAGRICO_DATABASE_NAME','solila'),
+        'USER': os.environ.get('JUNTAGRICO_DATABASE_USER', 'postgres'), #''junatagrico', # The following settings are not used with sqlite3:
+        'PASSWORD': os.environ.get('JUNTAGRICO_DATABASE_PASSWORD', 'postgres'), #''junatagrico',
+        'HOST': os.environ.get('JUNTAGRICO_DATABASE_HOST', 'localhost'), #'localhost', # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'PORT': os.environ.get('JUNTAGRICO_DATABASE_PORT', '32768'), #''', # Set to empty string for default.
     }
 }
 
