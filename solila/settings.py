@@ -8,7 +8,7 @@ SECRET_KEY = os.environ.get('JUNTAGRICO_SECRET_KEY', "s0m3_s3kr1t_k3y")
 
 DEBUG = os.environ.get("JUNTAGRICO_DEBUG", "True") == "True"
 
-ALLOWED_HOSTS = ['juntagrico.eulenhof-moehlin.ch','solila.juntagrico.science', 'localhost','juntagrico.solila-eulenhof.ch', '127.0.0.1']
+ALLOWED_HOSTS = ['solila.juntagrico.science', 'localhost', 'juntagrico.solila-eulenhof.ch', '127.0.0.1']
 
 
 # Application definition
@@ -190,8 +190,8 @@ ORGANISATION_BANK_CONNECTION = {"PC" : "0",
             "ESR" : ""}
 INFO_EMAIL = "info@solila-eulenhof.ch"
 SERVER_URL = "www.solila.ch"
-ADMINPORTAL_NAME = "juntagrico.eulenhof-moehlin.ch"
-ADMINPORTAL_SERVER_URL = "juntagrico.eulenhof-moehlin.ch"
+ADMINPORTAL_NAME = "juntagrico.solila-eulenhof"
+ADMINPORTAL_SERVER_URL = "juntagrico.solila-eulenhof.ch"
 BUSINESS_REGULATIONS = ""
 BYLAWS = ""
 MAIL_TEMPLATE = "mails/email.html"
