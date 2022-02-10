@@ -176,13 +176,12 @@ VOCABULARY = {
 ORGANISATION_NAME = "solila"
 ORGANISATION_NAME_CONFIG = {"type" : "Verein",
     "gender" : "M"}
-ORGANISATION_LONG_NAME = "Verein Solidarische Landwirtschaft Eulenhof"
-ORGANISATION_ADDRESS = {"name":"Verein Solidarische Landwirtschaft Eulenhof", 
-            "street" : "Schaufelgasse",
-            "number" : "34a",
-            "zip" : "4313",
-            "city" : "Möhlin",
-            "extra" : "kein"}
+ORGANISATION_LONG_NAME = "Genossenschaft SoliLa Eulenhof"
+ORGANISATION_ADDRESS = {"name": "Genossenschaft SoliLa Eulenhof",
+            "street": "Schaufelgasse",
+            "number": "34a",
+            "zip": "4313",
+            "city": "Möhlin"}
 ORGANISATION_PHONE =''
 ORGANISATION_BANK_CONNECTION = {"PC" : "0",
             "IBAN" : "CH 10 0839 2000 1516 0130 5",
