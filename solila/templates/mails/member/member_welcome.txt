@@ -21,5 +21,4 @@ Wir freuen uns, dich bei der SoliLa zu begrüssen.
 Bis bald und liebe Grüsse
 die SoliLa-Betriebsgruppe
 
-Weitere Infos: http://www.solila.ch
 {% endblock %}
