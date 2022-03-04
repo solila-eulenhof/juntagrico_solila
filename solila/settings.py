@@ -183,9 +183,9 @@ ORGANISATION_ADDRESS = {"name": "Genossenschaft SoliLa Eulenhof",
                         "city": "Möhlin"}
 ORGANISATION_PHONE = ''
 ORGANISATION_BANK_CONNECTION = {"PC": "0",
-                                "IBAN": "CH 10 0839 2000 1516 0130 5",
+                                "IBAN": "CH71 0839 0037 7529 1010 0",
                                 "BIC": "",
-                                "NAME": "Freie Gemeinschaftsbank Genossenschaft",
+                                "NAME": "Alternative Bank Schweiz AG, 4601 Olten",
                                 "ESR": ""}
 INFO_EMAIL = "info@solila-eulenhof.ch"
 SERVER_URL = "www.solila.ch"
