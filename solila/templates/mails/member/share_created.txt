@@ -28,8 +28,6 @@ Um die Arbeit der Buchhaltung zu erleichtern zahle bitte nur 1 Anteilschein auf 
 Gib im Betreff die Systemnummer an sowie die E-Mail-Adresse oder den Namen der Halterin oder des Halters des Anteilscheins.
 Letzteres ist vor allem wichtig, wenn du den Anteilschein für jemand anderen bezahlst.
 
-{% blocktrans trimmed %}
 Bis bald und liebe Grüsse
 die SoliLa-Betriebsgruppe
-{% endblocktrans %}
 {% endblock %}
