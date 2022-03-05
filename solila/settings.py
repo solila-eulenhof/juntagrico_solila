@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'adminsortable2',
     'crispy_forms',
     'solila',
+    'polymorphic',
 ]
 
 ROOT_URLCONF = 'solila.urls'
@@ -99,7 +100,8 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'impersonate.middleware.ImpersonateMiddleware'
+    'impersonate.middleware.ImpersonateMiddleware',
+    'django.contrib.sites.middleware.CurrentSiteMiddleware'
 ]
 
 EMAIL_HOST = os.environ.get('JUNTAGRICO_EMAIL_HOST')
@@ -110,6 +112,7 @@ EMAIL_USE_TLS = os.environ.get('JUNTAGRICO_EMAIL_TLS', 'True') == 'True'
 EMAIL_USE_SSL = os.environ.get('JUNTAGRICO_EMAIL_SSL', 'False') == 'True'
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
 WHITELIST_EMAILS = []
 
@@ -189,12 +192,10 @@ ORGANISATION_BANK_CONNECTION = {"PC": "0",
                                 "ESR": ""}
 INFO_EMAIL = "info@solila-eulenhof.ch"
 SERVER_URL = "www.solila.ch"
-ADMINPORTAL_NAME = "juntagrico.solila-eulenhof"
-ADMINPORTAL_SERVER_URL = "juntagrico.solila-eulenhof.ch"
 BUSINESS_REGULATIONS = ""
 BYLAWS = "https://solila.ch/wordpress/wp-content/uploads/2020/10/Statuten_SoliLa_Genossenschaft.pdf"
 MAIL_TEMPLATE = "mails/email.html"
-STYLE_SHEET = "/static/css/solila.css"
+STYLES = {'static': ['css/solila.css']}
 FAVICON = "/static/juntagrico/img/favicono.ico"
 FAQ_DOC = ""
 EXTRA_SUB_INFO = ""
