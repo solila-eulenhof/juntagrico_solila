@@ -20,11 +20,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
-    'juntagrico',
-    'impersonate',
-    'adminsortable2',
-    'crispy_forms',
     'solila',
+    'juntagrico',
+    'fontawesomefree',
+    'import_export',
+    'impersonate',
+    'crispy_forms',
+    'adminsortable2',
     'polymorphic',
 ]
 
@@ -112,7 +114,14 @@ EMAIL_USE_TLS = os.environ.get('JUNTAGRICO_EMAIL_TLS', 'True') == 'True'
 EMAIL_USE_SSL = os.environ.get('JUNTAGRICO_EMAIL_SSL', 'False') == 'True'
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "django.contrib.staticfiles.storage.ManifestStaticFilesStorage",
+    },
+}
 
 WHITELIST_EMAILS = []
 
@@ -120,7 +129,7 @@ WHITELIST_EMAILS = []
 def whitelist_email_from_env(var_env_name):
     email = os.environ.get(var_env_name)
     if email:
-        WHITELIST_EMAILS.append(email.replace('@gmail.com', '(\+\S+)?@gmail.com'))
+        WHITELIST_EMAILS.append(email.replace('@gmail.com', r'(\+\S+)?@gmail.com'))
 
 
 if DEBUG is True:
@@ -135,7 +144,7 @@ IMPERSONATE = {
     'REDIRECT_URL': '/my/profile',
 }
 
-LOGIN_REDIRECT_URL = "/my/home"
+LOGIN_REDIRECT_URL = "/"
 
 """
     Admin Settings
@@ -190,8 +199,13 @@ ORGANISATION_BANK_CONNECTION = {"PC": "0",
                                 "BIC": "",
                                 "NAME": "Alternative Bank Schweiz AG, 4601 Olten",
                                 "ESR": ""}
-INFO_EMAIL = "info@solila-eulenhof.ch"
-SERVER_URL = "www.solila.ch"
+CONTACTS = {
+    "general": "info@solila-eulenhof.ch"
+}
+ORGANISATION_WEBSITE = {
+    'name': "Solila Eulenhof",
+    'url': "https://www.solila.ch"
+}
 BUSINESS_REGULATIONS = ""
 BYLAWS = "https://solila.ch/wordpress/wp-content/uploads/2020/10/Statuten_SoliLa_Genossenschaft.pdf"
 MAIL_TEMPLATE = "mails/email.html"
@@ -224,3 +238,5 @@ IMAGES = {'status_100': '/static/juntagrico/img/status_100.png',
 GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
+IMPORT_EXPORT_EXPORT_PERMISSION_CODE = 'view'
