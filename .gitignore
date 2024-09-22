@@ -9,4 +9,4 @@ ssl/*
 *.db
 .venv/*
 pg-db/*
-db-dump.sql
+solila-dump
