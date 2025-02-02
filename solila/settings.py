@@ -113,6 +113,11 @@ EMAIL_PORT = int(os.environ.get('JUNTAGRICO_EMAIL_PORT', '25'))
 EMAIL_USE_TLS = os.environ.get('JUNTAGRICO_EMAIL_TLS', 'True') == 'True'
 EMAIL_USE_SSL = os.environ.get('JUNTAGRICO_EMAIL_SSL', 'False') == 'True'
 
+FROM_FILTER = {
+    'filter_expression': os.environ.get('JUNTAGRICO_EMAIL_USER'),
+    'replacement_from': os.environ.get('JUNTAGRICO_EMAIL_USER')
+}
+
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
 STORAGES = {
     "default": {
