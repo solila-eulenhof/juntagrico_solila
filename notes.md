@@ -1,10 +1,10 @@
 Commands to run postgres locally:
 ```shell
-podman pull postgres:14
-podman volume create solila-db
-podman run --name solila-db -e POSTGRES_USER=solila -e POSTGRES_PASSWORD=solila -p 5432:5432 -v solila-db:/var/lib/postgresql/data -d postgres:14
-podman cp solila-dump solila-db:/solila-dump
-podman exec -it solila-db bash
+docker pull postgres:15
+docker volume create solila-db-pg15
+docker run --name solila-db -e POSTGRES_USER=solila -e POSTGRES_PASSWORD=solila -p 5432:5432 -v solila-db-pg15:/var/lib/postgresql/data -d postgres:15
+docker cp solila-dump solila-db:/solila-dump
+docker exec -it solila-db bash
 ```
               
 Inside the container

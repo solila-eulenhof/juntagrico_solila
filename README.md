@@ -3,84 +3,53 @@ Juntagrico Heroku Template for cookiecutter
 
 This template sets up a project to be used with juntagrico.science as hosting.
 
-# Setting up locally to test setup
+# Local development
 
-On any environment install Python 3, and add it to your path
+Install [uv](https://docs.astral.sh/uv/), then create the pinned Python 3.11 environment and install the locked dependencies:
 
-## UNIX
+```shell
+uv sync
+```
 
-### Set your environment variables
+The application uses PostgreSQL by default. A disposable local instance can be started with Docker:
 
+```shell
+docker run --name solila-db \
+  -e POSTGRES_USER=solila \
+  -e POSTGRES_PASSWORD=solila \
+  -e POSTGRES_DB=juntagrico \
+  -p 5432:5432 \
+  -v solila-db-pg15:/var/lib/postgresql/data \
+  -d postgres:15
+```
 
-### Installing requirements
+On subsequent starts, use `docker start solila-db`. See [notes.md](notes.md) if you need to restore an existing database dump.
 
-    sudo easy_install pip
-    sudo pip install virtualenv
-    virtualenv --distribute venv
-    source ./venv/bin/activate
-    pip install --upgrade -r requirements.txt
+Initialize Django and create a local administrator:
 
-### Setup DB
+```shell
+uv run manage.py migrate
+uv run manage.py createsuperuser
+uv run manage.py create_member_for_superusers
+```
 
-    ./manage.py migrate
-    
-### Setup Admin User
+Optionally create test data:
 
-    ./manage.py createsuperuser
-    ./manage.py create_member_for_superusers
-    
-### Create Tesdata (not required)
+```shell
+uv run manage.py generate_testdata
+# Or, for a larger data set:
+uv run manage.py generate_testdata_advanced
+```
 
-Simple
+Run the development server:
 
-    ./manage.py generate_testdata
+```shell
+uv run manage.py runserver
+```
 
-More complex
+The environment is managed by `pyproject.toml` and `uv.lock`; use `uv add <package>` when adding a dependency.
 
-    ./manage.py generate_testdata_advanced
-    
-### Run the server
-
-    ./manage.py runserver
-
-## Windows
-
-### Set your environment variables
-
-This should do it for your local setup:
-
-
-### Installing requirements
-
-    pip install virtualenv
-    virtualenv --distribute venv
-    venv\Scripts\activate.bat
-    pip install --upgrade -r requirements.txt
-
-### Setup DB
-
-    python -m manage migrate
-    
-### Setup Admin User
-
-    python -m manage createsuperuser
-    python -m manage create_member_for_superusers
-    
-### Create Tesdata (not required)
-
-Simple
-
-    python -m manage generate_testdata
-
-More complex
-
-    python -m manage generate_testdata_advanced
-    
-### Run the server
-
-    python -m manage runserver
-    
-#Heroku
+# Heroku
 
 you have to login to a heroku bash and setup the db and create the admin user as desbribed in the UNIX section
     
